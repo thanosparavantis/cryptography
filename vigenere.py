@@ -8,11 +8,23 @@ class VigenereCypher:
     def __init__(self, key):
         self.key = key
 
-    def repeat_token(self, key, length):
-        return (key * length)[0:length]
+    def repeat_token(self, key, message):
+        extended_key = ""
+        index = 0
+        for char in message:
+            if char.isalpha():
+                if index >= len(self.key):
+                    index = 0
+                extended_key += self.key[index]
+                index += 1
+            else:
+                extended_key += char
+
+        return extended_key
 
     def encrypt(self, message):
-        extended_key = self.repeat_token(self.key, len(message))
+        extended_key = self.repeat_token(self.key, message)
+        print(extended_key)
         result = ""
         for i, char in enumerate(message):
             if char.isalpha():
@@ -24,7 +36,7 @@ class VigenereCypher:
         return result
 
     def decrypt(self, message):
-        extended_key = self.repeat_token(self.key, len(message))
+        extended_key = self.repeat_token(self.key, message)
         result = ""
         for i, char in enumerate(message):
             if char.isalpha():
@@ -37,14 +49,3 @@ class VigenereCypher:
 
     def __str__(self):
         return self.key
-
-if __name__ == "__main__":
-    key = input("Enter a key: ")
-    message = input("Enter a message: ")
-
-    cypher = VigenereCypher(key)
-    encrypted = cypher.encrypt(message)
-    decrypted = cypher.decrypt(encrypted)
-
-    print("Encrypted: {}".format(encrypted))
-    print("Decrypted: {}".format(decrypted))
