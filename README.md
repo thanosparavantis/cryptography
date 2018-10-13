@@ -1,6 +1,6 @@
 # Cryptography
 
-This is an experimental project that illustrates popular cryptography techniques. It contains implementations of algorithms, unit tests and several use case scenarios. The prototype source code is written in Python 3.6 and have some issues or vulnerabilities.
+This is an experimental project that illustrates popular cryptography techniques. It contains implementations of algorithms, unit tests and several use case scenarios. The prototype source code is written in Python 3.6 and may have some issues or vulnerabilities.
 
 ## Caesar Cypher
 
