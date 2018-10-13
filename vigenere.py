@@ -1,7 +1,7 @@
 import string
 
 
-class VigenereCypher:
+class VigenereCipher:
     char_to_int = dict(zip(string.ascii_lowercase, range(26)))
     int_to_char = dict(zip(range(26), string.ascii_lowercase))
 
