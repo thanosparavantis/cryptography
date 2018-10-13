@@ -39,9 +39,12 @@ class VigenereCypher:
         return self.key
 
 if __name__ == "__main__":
-    cypher = VigenereCypher(key="thequickbrownfoxjumpsoverthelazydog")
-    encrypted = cypher.encrypt(message="crypto is short for cryptography")
-    decrypted = cypher.decrypt(message=encrypted)
+    key = input("Enter a key: ")
+    message = input("Enter a message: ")
+
+    cypher = VigenereCypher(key)
+    encrypted = cypher.encrypt(message)
+    decrypted = cypher.decrypt(encrypted)
 
     print("Encrypted: {}".format(encrypted))
     print("Decrypted: {}".format(decrypted))
