@@ -2,6 +2,9 @@
 
 An experimental Python project that illustrates basic cryptography techniques. It features implementations of the Caesar and Vigenere cipher with their respective unit tests. The Caesar cipher is initialized with a key integer value ranging from 0 to 25. The Vigenere cipher is initialized with a key string value that is preferred to be a large sequence. Both ciphers have encrypt and decrypt methods that accept plain strings of text.
 
+**Browse through related projects on thanosparavantis.com:**  
+https://www.thanosparavantis.com/projects/cryptography
+
 ## Caesar Cipher
 
 Demonstration of a substitution cipher.
