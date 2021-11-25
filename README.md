@@ -1,6 +1,6 @@
 # Cryptography
 
-This is an experimental project that illustrates popular cryptography techniques. It contains implementations of algorithms, unit tests and several use case scenarios. The prototype source code is written in Python 3.6 and may have some issues or vulnerabilities.
+An experimental Python project that illustrates basic cryptography techniques. It features implementations of the Caesar and Vigenere cipher with their respective unit tests. The Caesar cipher is initialized with a key integer value ranging from 0 to 25. The Vigenere cipher is initialized with a key string value that is preferred to be a large sequence. Both ciphers have encrypt and decrypt methods that accept plain strings of text.
 
 ## Caesar Cipher
 
